@@ -96,3 +96,48 @@ function splitString(str) {
   return wordsArray;
 }
 splitString(inputString);
+// ==============================
+// ====== B
+console.log("Assignment 1 - B");
+// === 1 - skipped.
+// === 2 -
+console.log("B-2");
+
+// Hoisting في جافاسكربت
+// هو إن جافاسكربت بترفع كل الـ declarations لأعلى  ال scope بتاعها قبل ما الكود يبدأ يتنفذ وبعدين تبدأ تنفذ الكود سطر بسطر.
+// لو حاولت استخدم variable  قبل الـdeclaration  النتيجة هتختلف حسب طريقة الـ declaration
+console.log(name); // output => undefined
+var name = "Hassan";
+
+/**
+ * 
+ 
+ Temporal Dead Zone (TDZ) 
+ال variables معمول لها hoist
+و لكن مبقدرش اوصل للقيم بتاعتها  الا بعد ما الـ declaration  يتنفذ
+
+ */
+
+// console.log(age);  output => ReferenceError: Cannot access 'age' before initialization
+// console.log(salary); // output => ReferenceError: Cannot access 'salary' before initialization
+let age = 30;
+const salary = 50000;
+// === 3 -
+/**
+== compare operartor compares values only,
+=== compare operator compares values and types.
+ */
+
+// === 4 - skipped
+// === 5 -
+console.log("B-5");
+/**
+Coercion = The automatic convert of values from one data type to another example: strings to numbers
+ */
+console.log(8 + "2"); // output = "82" (number to string)
+console.log("8" - 2); // output = 6 (string to number)
+/**
+Conversion = The manual convert of values from one data type to another using built-in functions
+ */
+console.log(+"123" + 7); // output = 130 (string to number)
+console.log(Boolean(1)); // output = true (number to boolean)
