@@ -58,18 +58,26 @@ let squareNum = (n) => n * n;
 console.log(squareNum(5));
 // === 10 - Write a function that destructures an object to extract values and returns a formatted string. (0.5 Grade)
 console.log("A-10");
+
 const person = { name: "John", age: 25 };
-function formatData(name, age) {
-  console.log(name + " is " + age + " years old.");
-  return name + " is " + age + " years old.";
+
+function formatData({ name, age }) {
+  console.log(name + " is " + age + " years old");
+  return name + " is " + age + " years old";
 }
-formatData(person.name, person.age);
+
+formatData(person);
 // === 11 - Write a function that accepts multiple parameters (two or more) and returns their sum.
 console.log("A-11");
-function sums(a, b, c, d, e) {
-  console.log(a + b + c + d + e);
-  return a + b + c + d + e;
+function sums(...numbers) {
+  let total = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 }
+
+console.log(sums(1, 2, 3, 4, 5)); // 15
 sums(1, 2, 3, 4, 5);
 // === 12 - skipped
 // === 13 - Write a function to find the largest number in an array.
